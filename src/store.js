@@ -12,7 +12,11 @@ export default class Store extends Dispatcher {
 			this._store[reducer.name] = reducer.getState();
 		});
 
-		GlobalDispatcher.subscribe(this._reduce);
+		GlobalDispatcher.subscribe(this._reduce.bind(this));
+	}
+
+	getState() {
+		return this._store;
 	}
 
 	_reduce(type, data) {

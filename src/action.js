@@ -1,7 +1,7 @@
 import GlobalDispatcher from './dispatcher';
 
-export default (action, func) => {
-	return (...args) {
+export default function(action, func) {
+	return function(...args) {
 		const state = func.apply(this, args);
 		GlobalDispatcher.emit(action, state);
 	};

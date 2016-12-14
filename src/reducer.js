@@ -1,7 +1,7 @@
 export default class Reducer {
 
 	constructor(name, initialState) {
-		if (new.target === Abstract) {
+		if (new.target === Reducer) {
 	    	throw new TypeError("Cannot construct Abstract Reducer");
 	    }
 	    this.name = name;
