@@ -30,7 +30,7 @@ const MyAction = Action('MyAction', data => {
 export default MyAction;
 ```
 
-Reducers with functions named `MyAction` will be called with data returned from the action.
+When added to a store, reducers with functions named `MyAction` will be called with data returned from the action.
 
 ### Reducer
 
