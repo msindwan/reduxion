@@ -1,4 +1,12 @@
-import Notifications from './components/Notifications';
+/**
+ * Reduxion Example
+ *
+ * @Author : Mayank Sindwani
+ * @Date   : 2016-12-22
+ *
+ * Description: Example Reduxion App Entry point.
+ **/
+
 import LoginForm from './components/LoginForm';
 import AppStore from './store';
 import ReactDOM from 'react-dom';
@@ -18,14 +26,15 @@ const App = React.createClass({
     render() {
         return (
             <div>
-                <Notifications />
                 <div className="sign-in-header">
                     <h1>Reduxtion Login Example</h1>
+                    <p>View the console to see actions that were dispatched.</p>
                     <img className='logo' src="logo.svg"></img>
                 </div>
                 <div className="sign-in-container">
                     <div>
                         <LoginForm
+                            authorizing={this.state.login.authorizing}
                             password={this.state.login.password}
                             email={this.state.login.email} />
                     </div>
