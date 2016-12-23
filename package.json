@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git+https://msindwan@bitbucket.org/msindwan/reduxion.git"
   },
+  "main": "src/index.js",
   "author": "Mayank Sindwani",
   "license": "MIT",
   "homepage": "https://bitbucket.org/msindwan/reduxion#readme",
