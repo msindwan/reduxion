@@ -11,7 +11,7 @@ Reduxion requires **Node.js >= 4.3.2**
 Reduxion is written in ES6 and requires babel for transpilation. The API is identical to redux with a few exceptions (i.e you can't add middleware). You can import the following modules from the npm package:
 
 ``` js
-import { Action, Reducer, Store } from 'reduxtion';
+import { Action, Reducer, Store } from 'reduxion';
 ```
 [See the login example](https://msindwan.bitbucket.io/reduxion_example) for usage.
 
@@ -44,7 +44,7 @@ const INITIAL_STATE = {};
 export default class MyReducer extends Reducer {
 
     constructor(name) {
-        super(name, INTIAL_STATE);
+        super(name, INITIAL_STATE);
     }
 
     // Reducer function to handle myAction.
@@ -62,7 +62,7 @@ The store combines reducers into one state object that a component subscribes to
 
 ``` js
 import MyReducer from './reducers/myReducer';
-import { Store } from 'reduxtion';
+import { Store } from 'reduxion';
 
 // Create the app reducers.
 const reducer = new MyReducer('myReducerName');
