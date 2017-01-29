@@ -11,9 +11,6 @@ export default class Reducer {
 
     constructor(name, initialState) {
         // Initialize the reducer.
-        if (new.target === Reducer) {
-            throw new TypeError("Cannot construct Abstract Reducer");
-        }
         this.name = name;
         this.state = Object.assign({}, initialState);
     }
