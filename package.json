@@ -4,7 +4,7 @@
   "description": "A spin on redux that combines elements of flux",
   "repository": {
     "type": "git",
-    "url": "git+https://msindwan@bitbucket.org/msindwan/reduxion.git"
+    "url": "git+https://github.com/msindwan/reduxion.git"
   },
   "main": "dist/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "author": "Mayank Sindwani",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/msindwan/reduxion#readme",
+  "homepage": "https://github.com/msindwan/reduxion#readme",
   "engines": {
     "node": ">=4.3.2"
   },

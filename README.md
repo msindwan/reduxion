@@ -13,7 +13,7 @@ Reduxion is written in ES6 and requires babel for transpilation. The API is iden
 ``` js
 import { Action, Reducer, Store } from 'reduxion';
 ```
-[See the login example](https://msindwan.bitbucket.io/reduxion_example) for usage.
+[See the login example](https://msindwan.github.io/reduxion/example) for usage.
 
 ### Action
 
