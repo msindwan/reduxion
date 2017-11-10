@@ -98,7 +98,7 @@ var App = _react2.default.createClass({
                 _react2.default.createElement(
                     'h1',
                     null,
-                    'Reduxtion Login Example'
+                    'Reduxion Login Example'
                 ),
                 _react2.default.createElement(
                     'p',

@@ -27,7 +27,7 @@ const App = React.createClass({
         return (
             <div>
                 <div className="sign-in-header">
-                    <h1>Reduxtion Login Example</h1>
+                    <h1>Reduxion Login Example</h1>
                     <p>View the console to see actions that were dispatched.</p>
                     <img className='logo' src="logo.svg"></img>
                 </div>
