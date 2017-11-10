@@ -75,4 +75,4 @@ The state of the store is a collection of reducer states namespaced by the reduc
 
 ## License
 
-Licensed under the MIT License.
+Licensed under the MIT License
