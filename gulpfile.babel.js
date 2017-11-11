@@ -104,7 +104,7 @@ gulp.task('lint', 'Lints all of the modules', () => {
         .pipe(plugins.eslint.failAfterError());
 });
 
-gulp.task('test', 'Runs tests for mhtml2html', () => {
+gulp.task('test', 'Runs tests for reduxion', () => {
     // Run mocha tests.
     return gulp
         .src(['tests/**/*.js'], { read: false })
