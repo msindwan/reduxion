@@ -3,10 +3,8 @@
  *
  * @Author : Mayank Sindwani
  * @Date   : 2017-11-10
- * @Description : Tests for reduxion.
  *
- * The MIT License(MIT)
- * Copyright(c) 2016 Mayank Sindwani
+ * @Description : Tests for reduxion.
  **/
 
 import ActionTests     from './action';

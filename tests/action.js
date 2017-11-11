@@ -3,10 +3,8 @@
  *
  * @Author : Mayank Sindwani
  * @Date   : 2017-11-10
- * @Description : Reduxion action tests.
  *
- * The MIT License(MIT)
- * Copyright(c) 2016 Mayank Sindwani
+ * @Description : Reduxion action tests.
  **/
 
 import GlobalDispatcher from '../src/dispatcher';
@@ -42,7 +40,7 @@ export default function () {
     });
 
     afterEach(() => {
-        // Nuke distatcher listeners.
+        // Nuke dispatcher listeners.
         GlobalDispatcher._listeners = [];
     });
 
