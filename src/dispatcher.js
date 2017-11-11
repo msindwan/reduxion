@@ -21,9 +21,9 @@ class Dispatcher {
 
     unsubscribe(listener) {
         // Remove a listener.
-        const index = this._listeners.index(listener);
+        const index = this._listeners.indexOf(listener);
         if (index > -1) {
-            this._listeners.splice(1, index);
+            this._listeners.splice(index, 1);
         }
     }
 
