@@ -19629,9 +19629,9 @@ var Dispatcher = function () {
         key: "unsubscribe",
         value: function unsubscribe(listener) {
             // Remove a listener.
-            var index = this._listeners.index(listener);
+            var index = this._listeners.indexOf(listener);
             if (index > -1) {
-                this._listeners.splice(1, index);
+                this._listeners.splice(index, 1);
             }
         }
     }, {
