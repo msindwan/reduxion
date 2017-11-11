@@ -1,6 +1,7 @@
 # Reduxion
 
 [![npm version](https://badge.fury.io/js/reduxion.svg)](https://badge.fury.io/js/reduxion)
+[![circleci](https://circleci.com/gh/msindwan/reduxion.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/msindwan/reduxion)
 
 Reduxion is another take on [redux](https://redux.js.org/) that combines elements of [flux](https://facebook.github.io/flux/) for clarity and convenience including a global dispatcher for actions. It also makes use of ES6 features including inheritence and class notation for reducers.
 
