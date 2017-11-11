@@ -27,7 +27,7 @@ export default function () {
     });
 
     it("Should dispatch a global event", done => {
-        // Expect the global distatcher to call the subscriber.
+        // Expect the global dispatcher to call the subscriber.
         GlobalDispatcher.subscribe((type, data) => {
             chai.expect(type).to.equal('noop');
             chai.expect(data).to.equal('Test');
