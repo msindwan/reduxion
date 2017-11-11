@@ -1,6 +1,8 @@
 # Reduxion
 
-Reduxion is another take on redux that combines elements of flux for clarity and convenience including a global dispatcher for actions. It also makes use of ES6 features including inheritence and class notation for reducers.
+[![npm version](https://badge.fury.io/js/reduxion.svg)](https://badge.fury.io/js/reduxion)
+
+Reduxion is another take on [redux](https://redux.js.org/) that combines elements of [flux](https://facebook.github.io/flux/) for clarity and convenience including a global dispatcher for actions. It also makes use of ES6 features including inheritence and class notation for reducers.
 
 ## Dependencies
 
@@ -8,12 +10,12 @@ Reduxion requires **Node.js >= 4.3.2**
 
 ## API
 
-Reduxion is written in ES6 and requires babel for transpilation. The API is identical to redux with a few exceptions (i.e you can't add middleware). You can import the following modules from the npm package:
+Reduxion is written in ES6 and requires babel for transpilation. The API is identical to redux with a few exceptions (e.g you can't add middleware). You can import the following modules from the npm package:
 
 ``` js
 import { Action, Reducer, Store } from 'reduxion';
 ```
-[See the login example](https://msindwan.github.io/reduxion/example) for usage.
+[See a live demo](https://msindwan.github.io/reduxion/example) of the example included.
 
 ### Action
 
