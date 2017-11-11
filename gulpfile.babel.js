@@ -7,17 +7,18 @@
  * Description : Tasks for building the reduxion example.
  **/
 
-import source from 'vinyl-source-stream';
-import gplugins from 'gulp-load-plugins';
-import babel from 'babel-core/register';
-import webserver from 'gulp-webserver';
+import source     from 'vinyl-source-stream';
+import babel      from 'babel-core/register';
 import browserify from 'browserify';
-import buffer from 'vinyl-buffer';
-import babelify from 'babelify';
-import watchify from 'watchify';
-import help from 'gulp-help';
-import tasks from 'gulp';
-import del from 'del';
+import buffer     from 'vinyl-buffer';
+import babelify   from 'babelify';
+import watchify   from 'watchify';
+import gplugins   from 'gulp-load-plugins';
+import webserver  from 'gulp-webserver';
+import help       from 'gulp-help';
+import mocha      from 'gulp-mocha';
+import tasks      from 'gulp';
+import del        from 'del';
 
 let gulp = help(tasks);
 let plugins = gplugins();
@@ -82,7 +83,11 @@ gulp.task('js', 'Builds the javascript files.', () => {
 gulp.task('css', 'Builds the css files.', () => {
     return gulp.src(config.sass.entry)
         .pipe(plugins.sass({
-            includePaths: ['node_modules/bootstrap-sass/assets/stylesheets', 'node_modules/font-awesome/scss', config.sassDirectory]
+            includePaths: [
+                'node_modules/bootstrap-sass/assets/stylesheets',
+                'node_modules/font-awesome/scss',
+                config.sassDirectory
+            ]
         }))
         .on('error', function (err) {
             plugins.util.log(plugins.util.colors.red(err.message));
@@ -97,6 +102,16 @@ gulp.task('lint', 'Lints all of the modules', () => {
         .pipe(plugins.eslint())
         .pipe(plugins.eslint.format())
         .pipe(plugins.eslint.failAfterError());
+});
+
+gulp.task('test', 'Runs tests for reduxion', () => {
+    // Run mocha tests.
+    return gulp
+        .src(['tests/**/*.js'], { read: false })
+        .pipe(mocha({
+            useColors: true,
+            require: ['babel-register']
+        }));
 });
 
 gulp.task('clean', 'Cleans the build folder', (cb) => {
