@@ -15,7 +15,7 @@ export default function () {
 
     it("Should wrap the action and accept a function with n arguments", done => {
         const noop = Action('noop', (a, b, c) => {
-            // Expect all arguments to be the provided.
+            // Expect all arguments to be provided.
             chai.expect(a).to.equal(1);
             chai.expect(b).to.equal(2);
             chai.expect(c).to.equal(3);
