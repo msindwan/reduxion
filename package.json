@@ -1,6 +1,6 @@
 {
   "name": "reduxion",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A spin on redux that combines elements of flux",
   "repository": {
     "type": "git",
@@ -8,7 +8,9 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "node ./node_modules/babel-cli/bin/babel.js src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "lint": "yarn gulp lint",
+    "test": "yarn gulp test"
   },
   "author": "Mayank Sindwani",
   "license": "MIT",
@@ -33,7 +35,7 @@
     "browserify": "^10.2.4",
     "chai": "^4.1.2",
     "del": "^1.2.0",
-    "eslint": "^2.3.0",
+    "eslint": "^4.18.2",
     "eslint-plugin-react": "^4.2.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.2",
