@@ -40,9 +40,12 @@ jobs:
 
 workflows:
   version: 2
-  pipeline:
+  build-deploy:
     jobs:
-      - build
+      - build:
+          filters:
+            tags:
+              only: /^v.*/
       - deploy:
           requires:
             - build
@@ -50,4 +53,4 @@ workflows:
             tags:
               only: /^v.*/
             branches:
-              only: master
+              ignore: /.*/
