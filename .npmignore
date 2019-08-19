@@ -2,6 +2,7 @@
 .gitignore
 gulpfile.babel.js
 example
+webpack.config.js
 .circleci
 tests
 src

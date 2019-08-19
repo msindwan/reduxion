@@ -1,6 +1,6 @@
 {
   "name": "reduxion",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A spin on redux that combines elements of flux",
   "repository": {
     "type": "git",
