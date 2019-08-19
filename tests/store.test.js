@@ -11,7 +11,6 @@ import GlobalDispatcher from '../src/dispatcher';
 import Action           from '../src/action';
 import Reducer          from '../src/reducer';
 import Store            from '../src/store';
-import chai             from 'chai';
 
 // Define custom reducers.
 class ReducerA extends Reducer {
@@ -42,17 +41,17 @@ class ReducerB extends Reducer {
     }
 }
 
-export default function () {
+describe('Store', () => {
 
     it("Creates a store with n reducers", done => {
         const reducerA = new ReducerA("ReducerA");
         const reducerB = new ReducerB("ReducerB");
         const store = new Store(reducerA, reducerB);
 
-        chai.expect(store._reducers[0]).to.equal(reducerA);
-        chai.expect(store._reducers[1]).to.equal(reducerB);
-        chai.expect(store._store['ReducerA']).to.equal(reducerA.getState());
-        chai.expect(store._store['ReducerB']).to.equal(reducerB.getState());
+        expect(store._reducers[0]).toEqual(reducerA);
+        expect(store._reducers[1]).toEqual(reducerB);
+        expect(store._store['ReducerA']).toEqual(reducerA.getState());
+        expect(store._store['ReducerB']).toEqual(reducerB.getState());
         done();
     });
 
@@ -62,10 +61,10 @@ export default function () {
         const store = new Store(reducerA, reducerB);
 
         store.subscribe(( _, store) => {
-            chai.expect(store["ReducerA"]).to.deep.equal({
+            expect(store["ReducerA"]).toEqual({
                 value: 'Test'
             });
-            chai.expect(store["ReducerB"]).to.deep.equal({
+            expect(store["ReducerB"]).toEqual({
                 value: 'Test'
             });
             done();
@@ -83,4 +82,4 @@ export default function () {
         GlobalDispatcher._listeners = [];
     });
 
-};
+});

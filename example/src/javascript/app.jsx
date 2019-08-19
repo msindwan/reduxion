@@ -11,6 +11,7 @@ import LoginForm from './components/LoginForm';
 import AppStore from './store';
 import ReactDOM from 'react-dom';
 import React from 'react';
+import '../sass/app.scss';
 
 // App Component.
 const App = React.createClass({

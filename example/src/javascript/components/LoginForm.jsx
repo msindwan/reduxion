@@ -9,6 +9,7 @@
 
 import { updateEmailAddress, updatePassword, login } from '../actions/login';
 import React from 'react';
+import '../../sass/app.scss';
 
 const LoginForm = React.createClass({
 

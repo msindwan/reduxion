@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 /**
  * Reduxion SASS
  *
@@ -6,7 +7,6 @@
  *
  * Description: App stylesheet.
  **/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
 html {
   background: #fbfbfb;
   font-family: 'Open Sans'; }
@@ -76,3 +76,4 @@ input {
     font-family: inherit; }
     .btn.btn-primary:disabled {
       background: #f0b6b6; }
+

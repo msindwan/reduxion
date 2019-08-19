@@ -9,16 +9,15 @@
 
 import GlobalDispatcher from '../src/dispatcher';
 import { Action } from '../src/index';
-import chai from 'chai';
 
-export default function () {
+describe('Actions', () => {
 
     it("Should wrap the action and accept a function with n arguments", done => {
         const noop = Action('noop', (a, b, c) => {
             // Expect all arguments to be provided.
-            chai.expect(a).to.equal(1);
-            chai.expect(b).to.equal(2);
-            chai.expect(c).to.equal(3);
+            expect(a).toEqual(1);
+            expect(b).toEqual(2);
+            expect(c).toEqual(3);
             done();
             return null;
         });
@@ -29,12 +28,12 @@ export default function () {
     it("Should dispatch a global event", done => {
         // Expect the global dispatcher to call the subscriber.
         GlobalDispatcher.subscribe((type, data) => {
-            chai.expect(type).to.equal('noop');
-            chai.expect(data).to.equal('Test');
+            expect(type).toEqual('noop');
+            expect(data).toEqual('Test');
             done();
         });
 
-        const noop = Action('noop', arg => {
+        Action('noop', arg => {
             return arg;
         })('Test');
     });
@@ -44,4 +43,4 @@ export default function () {
         GlobalDispatcher._listeners = [];
     });
 
-};
+});

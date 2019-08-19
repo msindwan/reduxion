@@ -2,4 +2,6 @@
 .gitignore
 gulpfile.babel.js
 example
-.circleci/
+.circleci
+tests
+src

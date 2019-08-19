@@ -8,9 +8,7 @@
  **/
 
 import GlobalDispatcher from '../src/dispatcher';
-import Action           from '../src/action';
 import Reducer          from '../src/reducer';
-import chai             from 'chai';
 
 // Define custom reducers.
 class ReducerA extends Reducer {
@@ -21,23 +19,23 @@ class ReducerA extends Reducer {
     }
 }
 
-export default function () {
+describe("Reducers", () => {
 
     it("Creates a reducer", done => {
         const reducerA = new ReducerA("ReducerA");
-        chai.expect(reducerA.getState()).to.deep.equal({ value: '' });
-        chai.expect(reducerA.name).to.equal("ReducerA");
+        expect(reducerA.getState()).toEqual({ value: '' });
+        expect(reducerA.name).toEqual("ReducerA");
         done();
     });
 
     it("Sets the correct state", done => {
         const reducerA = new ReducerA("ReducerA");
-        chai.expect(reducerA.getState()).to.deep.equal({ value: '' });
+        expect(reducerA.getState()).toEqual({ value: '' });
         reducerA.setState({
             value: 'Test',
             another: 'One'
         });
-        chai.expect(reducerA.getState()).to.deep.equal({
+        expect(reducerA.getState()).toEqual({
             value: 'Test',
             another: 'One'
         });
@@ -49,4 +47,4 @@ export default function () {
         GlobalDispatcher._listeners = [];
     });
 
-};
+});
